@@ -13,5 +13,8 @@
     "@astrojs/tailwind": "^1.0.0",
     "astro": "^1.1.1",
     "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^0.1.3"
   }
 }
