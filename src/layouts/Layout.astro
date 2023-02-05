@@ -29,76 +29,27 @@ const { title } = Astro.props
     <slot />
     <style>
       :root {
-        --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-        --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-        --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-        --color-text: hsl(12, 5%, 4%);
-        --color-bg: hsl(10, 21%, 95%);
-        --color-border: hsl(17, 24%, 90%);
         --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-        --card-gradient: linear-gradient(0deg, #a40606, #d98324);
-        --bg: rgb(17 24 39);
-        --bg-border: rgba(34, 46, 68, 0.8);
-        --bg-border-hover: rgba(47, 59, 83, 1);
-        --surface: #00334d;
-        --surface-hover: #014760;
-        --borders: #015749;
-        --shapes: #0f6471;
-        --text: #016284;
-        --text-hover: #007593;
-        --text-active: #0c8da3;
+        --surface: #1b1d1c;
+        --borders: #48535b;
+        --shapes-1: #48535b;
+        --shapes-2: #ffce54;
+        --shapes-3: #2e3131;
+        --shapes-4: #6f9fc9;
+        --shapes-5: #2e3131;
+        --shapes-6: #006e32;
+        --shapes-7: #ed7c57;
+        --shapes-7-highlight: #9d5a5a;
+        --text: #ffffff;
+        --text-1: #d9e2e6;
+        --text-1-highlight: #ffaa99;
+        --text-3: #ffb6a7;
       }
 
       html {
         background-color: var(--surface);
-      }
-
-      body {
-        margin: 0;
-      }
-
-      :global(h1) {
-        font-size: var(--font-size-xl);
-      }
-
-      :global(h2) {
-        font-size: var(--font-size-lg);
-      }
-
-      :global(code) {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-      . {
-        color: #fff;
         font-family: Droid Serif, sans-serif;
-        text-align: center;
-        background-image: url(/images/typesource/goal.jpg);
-        background-color: #d0d8db;
-        background-size: cover;
-        padding-top: 16em;
-        padding-bottom: 22em;
-      }
-
-      .puopu-r1 {
-        font-size: 6.5em;
-        font-weight: 400;
-        line-height: 1.1em;
-        text-transform: uppercase;
-      }
-
-      .puopu-small {
-        height: 2em;
-        width: 2em;
-        font-size: 0.25em;
-        font-weight: 300;
-        font-style: italic;
-        line-height: 1.9em;
-        text-transform: lowercase;
-        display: inline-block;
-        vertical-align: middle;
-        margin: -0.44em 0.1em 0;
-        border: 0.1em solid #fff;
+        color: var(--text);
       }
     </style>
   </body>
