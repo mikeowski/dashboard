@@ -35,9 +35,9 @@ const { href, title, body } = Astro.props
     padding: 0.15rem;
     background-image: var(--link-gradient);
     background-size: 400%;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem 0;
     background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: background-position 0.6s cubic-bezier(0.3, 1, 0.36, 1);
   }
 
   .link-card > a {
@@ -46,13 +46,13 @@ const { href, title, body } = Astro.props
     line-height: 1.4;
     padding: 1em 1.3em;
 
-    border-radius: 0.35rem;
+    border-radius: 0.7rem 0;
     color: var(--text-color);
 
     opacity: 0.8;
   }
   .link-card > a {
-    @apply dark:bg-gray-200 bg-white;
+    @apply dark:bg-gray-100 bg-white;
   }
   h2 {
     margin: 0;
