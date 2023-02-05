@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout.astro'
             <img src="memoji_head.png" alt="burak_mike_memoji" />
           </div>
           <h1 class="main-container-name">
-            Hi I am <strong>Burak Mike</strong>
+            Hi I am <strong class="text-gradient">Burak Mike</strong>
           </h1>
         </div>
         <p class="main-container-desc">
@@ -88,6 +88,7 @@ import Layout from '../layouts/Layout.astro'
             class="contact-container-img"
           />
         </div>
+        <div class="contact-container-img-container-shadow"></div>
       </div>
     </div>
     <!-- <h1 class="my-8 dark:text-white col-span-2">
@@ -429,11 +430,22 @@ import Layout from '../layouts/Layout.astro'
     margin-left: auto;
     margin-right: auto;
     bottom: 0px;
+    z-index: 1;
+    animation: zipzip 5s ease-in-out infinite;
   }
   .contact-container-img-container {
     position: absolute;
     bottom: 0px;
     width: 100%;
+    z-index: 0;
+  }
+  .contact-container-img-container-shadow {
+    position: absolute;
+    bottom: 0px;
+    height: 10px;
+    width: 100%;
+    z-index: 999999;
+    background-color: var(--shapes-7);
   }
   .contact-container-links {
     display: flex;
@@ -452,6 +464,7 @@ import Layout from '../layouts/Layout.astro'
     opacity: 0.8;
     transition: 0.2s ease-in-out;
   }
+
   @media (min-width: 960px) {
     .third-row {
       display: grid;
@@ -492,16 +505,22 @@ import Layout from '../layouts/Layout.astro'
     background-size: 100% 200%;
     background-position-y: 100%;
     border-radius: 0.4rem;
-    animation: pulse 4s ease-in-out infinite;
+    animation: pulse 3s ease-in-out infinite;
   }
-
-  @keyframespulse {
+  img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+  @keyframes pulse {
     0%,
     100% {
       background-position-y: 0%;
     }
     50% {
-      background-position-y: 80%;
+      background-position-y: 90%;
     }
   }
   @keyframes moveBackground {
