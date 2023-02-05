@@ -1,151 +1,404 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
-const BIRTHDAY = '01-11-2000'
-function calculateAge() {
-  const birthdateArray = BIRTHDAY.split('-')
-  const birthDay = parseInt(birthdateArray[0])
-  const birthMonth = parseInt(birthdateArray[1])
-  const birthYear = parseInt(birthdateArray[2])
-
-  const today = new Date()
-  const currentYear = today.getFullYear()
-  const currentMonth = today.getMonth() + 1
-  const currentDay = today.getDate()
-
-  let age = currentYear - birthYear
-
-  if (
-    currentMonth < birthMonth ||
-    (currentMonth == birthMonth && currentDay < birthDay)
-  ) {
-    age--
-  }
-
-  return age
-}
 ---
 
 <Layout title="Burak Mike">
-  <main class="m-auto p-4 gap-4 max-w-2xl flex flex-col md:grid grid-cols-2">
-    <h1 class="my-8 dark:text-white col-span-2">
-      Hi I am <span class="text-gradient whitespace-nowrap">Burak Mike</span>
-    </h1>
-
-    <p class="instructions">
-      I'm a {calculateAge()} year old developer, UI designer and Akdeniz University
-      student. I'm currently focused on personal projects and learning React.
-    </p>
-
-    <a
-      href="https://github.com/MahykBurak"
-      class="computer text-white flex items-stretch justify-end p-1 relative"
-    >
-      <div class="text-end">
-        You can find my personal projects on my Github profile
-      </div>
-      <div class="absolute bottom-2 right-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-          ></path>
-        </svg>
-      </div>
-      <div class="container-shadow"></div>
-    </a>
-    <ul role="list" class="gap-4 grid grid-cols-2 col-span-2">
-      <Card
-        href="https://mike4.dev/"
-        title="Portfolio Site"
-        body="My portfolio site written by NuxtJs(Vue), Tailwind and Firebase"
-      />
-      <Card
-        href="https://url.mike4.dev"
-        title="UrlCut"
-        body="Simple url shortener written by NextJs, Tailwind, Prisma, Trpc and Supabase"
-      />
-      <Card
-        href="https://vote.mike4.dev"
-        title="Alakazam"
-        body="Simple poll createor written by NextJs, Tailwind, Prisma, Trpc and Planetscale"
-      />
-      <a
-        href="mailto:hi@mike4.dev"
-        class="flex justify-end medidate-container w-full text-end"
-      >
-        <div class="container-shadow"></div>
-        <div class="text-white relative items-baseline w-full px-4 text-2xl">
-          <strong>Say Hi 👋</strong>
-          <div class="absolute bottom-2 right-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-              ></path>
-            </svg>
+  <main class="main">
+    <div class="first-row">
+      <div class="main-container col-span-2">
+        <div class="main-container-secondary">
+          <div class="main-container-img-container">
+            <img src="memoji_head.png" alt="burak_mike_memoji" />
           </div>
+          <h1 class="main-container-name">
+            Hi I am <strong>Burak Mike</strong>
+          </h1>
         </div>
+        <p class="main-container-desc">
+          Passionate <strong class="main-container-desc-highlight"
+            >front-end</strong
+          > developer delivering <span class="main-container-desc-highlight"
+            >creative solutions</span
+          > with technical expertise.
+        </p>
+      </div>
+      <div class="main-img-container">
+        <img class="main-img" src="memoji_mmm.png" alt="burak_mike_memoji2" />
+      </div>
+    </div>
+    <div class="second-row">
+      <a href="https://github.com/MahykBurak" class="github-container">
+        <img src="githubLogo.png" alt="githubLogo" class="github-img-small" />
+        <p class="github-p">
+          Check out my latest project on GitHub, where technology meets
+          creativity.
+        </p>
       </a>
-    </ul>
+      <div class="freelance-container">
+        <img
+          src="memoji_computer.png"
+          alt="burak_mike_memoji3"
+          class="freelance-container-img"
+        />
+        <p class="freelance-container-p">
+          Making an impact as a freelance professional.
+        </p>
+      </div>
+      <div class="skills-container">
+        <div class="skills-container-line">
+          <img src="figma.png" alt="figma" class="figma" />
+          <img src="js.png" alt="js" class="js" />
+        </div>
+        <div class="skills-container-line">
+          <img src="vue.png" alt="vue" class="vue" />
+          <img src="typescript.png" alt="typescript" class="typescript" />
+          <img src="react.png" alt="react" class="react" />
+        </div>
+        <div class="skills-container-line">
+          <img src="nextjs.png" alt="nextjs" class="nextjs" />
+          <img src="tailwind.png" alt="tailwind" class="tailwind" />
+        </div>
+      </div>
+    </div>
+    <div class="third-row">
+      <a
+        href="https://open.spotify.com/user/x2z49ts0mfbg6bbsvb6m8h8xx?si=ea3a152b82dc4f06"
+        class="spotify-container"
+      >
+        <img src="spotiflogo.png" alt="spotify" class="spotify-container-img" />
+      </a>
+      <div class="contact-container">
+        <div class="contact-container-secondary">
+          <a href="www.mike4.dev" class="contact-container-links">Portfolio</a>
+          <a href="mailto:hi@mike4.dev" class="contact-container-links">
+            <img src="email.png" alt="email" />
+          </a>
+        </div>
+        <div class="contact-container-img-container">
+          <img
+            src="memoji_medidate.png"
+            alt="burak_mike_memoji3"
+            class="contact-container-img"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- <h1 class="my-8 dark:text-white col-span-2">
+      Hi I am <span class="text-gradient whitespace-nowrap">Burak Mike</span>
+    </h1> -->
   </main>
 </Layout>
 
 <style>
-  .main {
-    margin: auto;
-    padding: 1em;
-    max-width: 60ch;
-    z-index: 2;
+  main {
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0;
   }
-  .medidate-container {
-    background-image: url('memoji_medidate.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 30%;
-    animation: moveBackground 5s ease-in-out;
-    border: 1px solid var(--bg-border);
-    border-radius: 0.7rem 0;
+  .first-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    width: 320px;
+    margin-top: 40px;
   }
 
-  .computer {
-    background-image: url('memoji_computer.png');
+  .main-container {
+    border: 1px solid #48535b;
+    width: 100%;
+    height: 403px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--shapes-1);
+    color: var(--text-1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .main-container-secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  strong {
+    font-weight: 700;
+  }
+  .main-container-img-container {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ffce54;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--shapes-2);
+  }
+  .main-container-name {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-decoration-line: underline;
+  }
+  .main-container-desc {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0 6px;
+    margin-top: 60px;
+  }
+  .main-container-desc-highlight {
+    color: var(--text-1-highlight);
+  }
+  .main-img-container {
+    width: 100%;
+    height: 246.45px;
+    background-color: var(--shapes-2);
+    border-radius: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-img {
+    object-fit: cover;
+    width: 255px;
+    height: 100%;
+  }
+  @media (min-width: 768px) {
+    .first-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      width: 100%;
+      gap: 20px;
+    }
+    .main-container {
+      height: 403px;
+      height: 100%;
+      grid-column: span 1;
+      align-items: flex-start;
+    }
+    .main-container-secondary {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      margin-left: 20px;
+    }
+    .main-container-name {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 35px;
+    }
+    .main-container-desc {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 70px;
+      margin-left: 64px;
+    }
+    .main-img-container {
+      height: 100%;
+    }
+    .main-img {
+      width: 420px;
+    }
+  }
+  .second-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    width: 320px;
+    margin-top: 20px;
+  }
+  .github-container {
+    background-color: var(--shapes-3);
+    width: 100%;
+    height: 290px;
+    border-radius: 20px 0px;
+    position: relative;
+  }
+  .github-container:hover {
+    background-color: #212121;
+
+    transition: 0.1s ease-in-out;
+  }
+
+  .github-img-small {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    fill: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+  }
+  .github-p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0 24px;
+    margin-top: 30px;
+    color: var(--text-3);
+    z-index: 1;
+  }
+  .freelance-container {
+    height: 210px;
+    width: 100%;
+    background-color: var(--shapes-4);
+    border-radius: 0px 20px;
+    position: relative;
+  }
+  .freelance-container-img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
     object-fit: contain;
-    background-position: 0%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 1px solid var(--bg-border);
-    border-radius: 0.7rem 0;
-    padding: 0.3rem;
+    width: 209.01px;
+    height: 209.01px;
+    z-index: 0;
   }
-  .computer:hover {
-    border: 1px solid var(--bg-border-hover);
-    transition: all 0.3s ease-in-out;
+  .freelance-container-p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    padding-right: 130px;
+    padding-left: 10px;
+    margin-top: 15px;
+    color: #ffffff;
   }
-  .medidate-container:hover {
-    border: 1px solid var(--bg-border-hover);
-    transition: all 0.3s ease-in-out;
+  .skills-container {
+    height: 343.89px;
+    width: 100%;
+    background-color: var(--shapes-5);
+    border-radius: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .skills-container-line {
+    display: flex;
+    height: 33%;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .figma {
+    object-fit: contain;
+    height: 73px;
+    margin-top: auto;
+    margin-bottom: 5px;
+  }
+  .js {
+    height: 64.73px;
+    margin-top: 15px;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  .vue {
+    object-fit: contain;
+    height: 49px;
+    margin-top: auto;
+  }
+  .typescript {
+    object-fit: contain;
+    height: 65px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .react {
+    object-fit: contain;
+    height: 63px;
+  }
+  .nextjs {
+    object-fit: contain;
+    height: 58px;
+    margin-top: auto;
+    margin-bottom: 5px;
+  }
+  .tailwind {
+    object-fit: contain;
+    height: 39px;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  .third-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    width: 320px;
+    margin-top: 20px;
+  }
+  .spotify-container {
+    height: 245.6px;
+    width: 100%;
+    background-color: var(--shapes-6);
+    border-radius: 0px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .spotify-container:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+  }
+  .spotify-container-img {
+    object-fit: contain;
+    width: 245.6px;
+  }
+  .contact-container {
+    height: 261px;
+    width: 100%;
+    background-color: var(--shapes-7);
+    border-radius: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .contact-container-secondary {
+    display: flex;
+    padding: 0 25px;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  .contact-container-img {
+    object-fit: contain;
+    width: 162px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+  }
+  .contact-container-img-container {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+  .contact-container-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    background-color: var(--shapes-7-highlight);
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+  .contact-container-links:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
   }
   .text-gradient {
     font-weight: 900;
     background-image: var(--astro-gradient);
-    font-size: var(--font-size-xl);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100% 200%;
@@ -154,9 +407,6 @@ function calculateAge() {
     animation: pulse 4s ease-in-out infinite;
   }
 
-  .imageMM {
-    animation: pulse 8s ease-in-out infinite;
-  }
   @keyframespulse {
     0%,
     100% {
@@ -190,20 +440,5 @@ function calculateAge() {
     100% {
       transform: rotate(10deg);
     }
-  }
-  .instructions {
-    line-height: 1.6;
-
-    padding: 1rem;
-    border-radius: 0.4rem 0px;
-    color: var(--color-bg);
-    border: 1px solid var(--color-border);
-  }
-
-  .instructions code shadow-white shadow-lg {
-    font-size: 0.875em;
-    border: 0.1em solid var(--color-border);
-    border-radius: 4px;
-    padding: 0.15em 0.25em;
   }
 </style>
