@@ -29,6 +29,11 @@ import Layout from '../layouts/Layout.astro'
     <div class="second-row">
       <a href="https://github.com/MahykBurak" class="github-container">
         <img src="githubLogo.png" alt="githubLogo" class="github-img-small" />
+        <img
+          src="githubLogo_large.png"
+          alt="githubLogo_large"
+          class="github-img-large"
+        />
         <p class="github-p">
           Check out my latest project on GitHub, where technology meets
           creativity.
@@ -168,7 +173,7 @@ import Layout from '../layouts/Layout.astro'
     width: 255px;
     height: 100%;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     .first-row {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -236,6 +241,14 @@ import Layout from '../layouts/Layout.astro'
     fill: rgba(0, 0, 0, 0.3);
     z-index: 0;
   }
+  .github-img-large {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    fill: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+  }
   .github-p {
     font-style: normal;
     font-weight: 400;
@@ -286,6 +299,47 @@ import Layout from '../layouts/Layout.astro'
     height: 33%;
     justify-content: space-between;
     padding: 0 20px;
+  }
+  @media (min-width: 960px) {
+    .second-row {
+      display: grid;
+      grid-template-columns: 2fr 3fr 2fr;
+      width: 100%;
+      gap: 20px;
+      height: 425px;
+    }
+    .github-container {
+      height: 100%;
+    }
+    .github-img-small {
+      display: none;
+    }
+    .github-img-large {
+      display: block;
+    }
+    .github-p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 47px;
+    }
+    .freelance-container {
+      height: 100%;
+    }
+    .freelance-container-img {
+      width: 350px;
+      height: 350px;
+    }
+    .freelance-container-p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 59px;
+      padding-right: 40%;
+    }
+    .skills-container {
+      height: 100%;
+    }
   }
   .figma {
     object-fit: contain;
@@ -395,6 +449,37 @@ import Layout from '../layouts/Layout.astro'
   .contact-container-links:hover {
     opacity: 0.8;
     transition: 0.2s ease-in-out;
+  }
+  @media (min-width: 960px) {
+    .third-row {
+      display: grid;
+      grid-template-columns: 2fr 5fr;
+      width: 100%;
+      gap: 20px;
+      height: 363px;
+    }
+    .spotify-container {
+      height: 100%;
+    }
+    .contact-container {
+      height: 100%;
+    }
+    .contact-container-img {
+      height: 100%;
+      width: auto;
+    }
+    .contact-container-img-container {
+      height: 100%;
+    }
+    .contact-container-secondary {
+      width: 100%;
+      align-items: center;
+      height: 100%;
+    }
+    .contact-container-links {
+      width: 170px;
+      height: 170px;
+    }
   }
   .text-gradient {
     font-weight: 900;
