@@ -1,55 +1,505 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
 ---
 
 <Layout title="Burak Mike">
-  <main class="m-auto p-4 max-w-2xl">
-    <h1 class="my-8 dark:text-white">
-      Hi I am <span class="text-gradient">Burak Mike</span>
-    </h1>
-    <p class="instructions">
-      I'am a developer, UI designer and student at Akdeniz University<br /> You can
-      check out my personal projects on <a href="https://github.com/MahykBurak"
-        ><strong>Github</strong>
+  <main class="main">
+    <div class="first-row">
+      <div class="main-container col-span-2">
+        <div class="main-container-secondary">
+          <div class="main-container-img-container">
+            <img src="memoji_head.png" alt="burak_mike_memoji" />
+          </div>
+          <h1 class="main-container-name">
+            Hi I am <strong class="text-gradient">Burak Mike</strong>
+          </h1>
+        </div>
+        <p class="main-container-desc">
+          Passionate <strong class="main-container-desc-highlight"
+            >front-end</strong
+          > developer delivering <span class="main-container-desc-highlight"
+            >creative solutions</span
+          > with technical expertise.
+        </p>
+      </div>
+      <div class="main-img-container">
+        <img class="main-img" src="memoji_mmm.png" alt="burak_mike_memoji2" />
+      </div>
+    </div>
+    <div class="second-row">
+      <a href="https://github.com/MahykBurak" class="github-container">
+        <img src="githubLogo.png" alt="githubLogo" class="github-img-small" />
+        <img
+          src="githubLogo_large.png"
+          alt="githubLogo_large"
+          class="github-img-large"
+        />
+        <p class="github-p">
+          Check out my latest project on GitHub, where technology meets
+          creativity.
+        </p>
       </a>
-      <br />
-      <strong>
-        <a href="mailto:hi@mike4.dev"><code>Say Hi 👋</code></a>
-      </strong>
-    </p>
-
-    <ul role="list" class="flex flex-col gap-1">
-      <Card
-        href="https://mike4.dev/"
-        title="Portfolio Site"
-        body="My portfolio site written by NuxtJs(Vue), Tailwind and Firebase"
-      />
-      <Card
-        href="https://url.mike4.dev"
-        title="UrlCut"
-        body="Simple url shortener written by NextJs, Tailwind, Prisma, Trpc and Supabase"
-      />
-      <Card
-        href="https://vote.mike4.dev"
-        title="Alakazam"
-        body="Simple poll createor written by NextJs, Tailwind, Prisma, Trpc and Planetscale"
-      />
-    </ul>
+      <div class="freelance-container">
+        <img
+          src="memoji_computer.png"
+          alt="burak_mike_memoji3"
+          class="freelance-container-img"
+        />
+        <p class="freelance-container-p">
+          Making an impact as a freelance professional.
+        </p>
+      </div>
+      <div class="skills-container">
+        <div class="skills-container-line">
+          <img src="figma.png" alt="figma" class="figma" />
+          <img src="js.png" alt="js" class="js" />
+        </div>
+        <div class="skills-container-line">
+          <img src="vue.png" alt="vue" class="vue" />
+          <img src="typescript.png" alt="typescript" class="typescript" />
+          <img src="react.png" alt="react" class="react" />
+        </div>
+        <div class="skills-container-line">
+          <img src="nextjs.png" alt="nextjs" class="nextjs" />
+          <img src="tailwind.png" alt="tailwind" class="tailwind" />
+        </div>
+      </div>
+    </div>
+    <div class="third-row">
+      <a
+        href="https://open.spotify.com/user/x2z49ts0mfbg6bbsvb6m8h8xx?si=ea3a152b82dc4f06"
+        class="spotify-container"
+      >
+        <img src="spotiflogo.png" alt="spotify" class="spotify-container-img" />
+      </a>
+      <div class="contact-container">
+        <div class="contact-container-secondary">
+          <a href="https://www.mike4.dev" class="contact-container-links"
+            >Portfolio</a
+          >
+          <a href="mailto:hi@mike4.dev" class="contact-container-links">
+            <img src="email.png" alt="email" />
+          </a>
+        </div>
+        <div class="contact-container-img-container">
+          <img
+            src="memoji_medidate.png"
+            alt="burak_mike_memoji3"
+            class="contact-container-img"
+          />
+        </div>
+        <div class="contact-container-img-container-shadow"></div>
+      </div>
+    </div>
+    <!-- <h1 class="my-8 dark:text-white col-span-2">
+      Hi I am <span class="text-gradient whitespace-nowrap">Burak Mike</span>
+    </h1> -->
   </main>
 </Layout>
 
 <style>
-  :root {
-    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  main {
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0;
+  }
+  .first-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    width: 320px;
+    margin-top: 40px;
+  }
+  :global(a:hover{
+  scale: 1.03;
+  transition: 0.2s ease-in-out;
+})
+  .main-container {
+    border: 1px solid #48535b;
+    width: 100%;
+    height: 403px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--shapes-1);
+    color: var(--text-1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .main-container-secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  strong {
+    font-weight: 700;
+  }
+  .main-container-img-container {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ffce54;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--shapes-2);
+  }
+  .main-container-name {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-decoration-line: underline;
+  }
+  .main-container-desc {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0 6px;
+    margin-top: 60px;
+  }
+  .main-container-desc-highlight {
+    color: var(--text-1-highlight);
+  }
+  .main-img-container {
+    width: 100%;
+    height: 246.45px;
+    background-color: var(--shapes-2);
+    border-radius: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-img {
+    object-fit: cover;
+    width: 255px;
+    height: 100%;
+  }
+  @media (min-width: 960px) {
+    .first-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      width: 100%;
+      gap: 20px;
+    }
+    .main-container {
+      height: 403px;
+      height: 100%;
+      grid-column: span 1;
+      align-items: flex-start;
+    }
+    .main-container-secondary {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      margin-left: 20px;
+    }
+    .main-container-name {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 35px;
+    }
+    .main-container-desc {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 70px;
+      margin-left: 64px;
+    }
+    .main-img-container {
+      height: 100%;
+    }
+    .main-img {
+      width: 420px;
+    }
+  }
+  .second-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    width: 320px;
+    margin-top: 20px;
+  }
+  .github-container {
+    background-color: var(--shapes-3);
+    width: 100%;
+    height: 290px;
+    border-radius: 20px 0px;
+    position: relative;
+  }
+  .github-container:hover {
+    background-color: #212121;
+
+    transition: 0.1s ease-in-out;
   }
 
-  .main {
-    margin: auto;
-    padding: 1em;
-    max-width: 60ch;
+  .github-img-small {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    fill: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+  }
+  .github-img-large {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    fill: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+  }
+  .github-p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0 24px;
+    margin-top: 30px;
+    color: var(--text-3);
+    z-index: 1;
+  }
+  .freelance-container {
+    height: 210px;
+    width: 100%;
+    background-color: var(--shapes-4);
+    border-radius: 0px 20px;
+    position: relative;
+  }
+  .freelance-container-img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    object-fit: contain;
+    width: 209.01px;
+    height: 209.01px;
+    z-index: 0;
+  }
+  .freelance-container-p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    padding-right: 130px;
+    padding-left: 10px;
+    margin-top: 15px;
+    color: #ffffff;
+  }
+  .skills-container {
+    height: 343.89px;
+    width: 100%;
+    background-color: var(--shapes-5);
+    border-radius: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .skills-container-line {
+    display: flex;
+    height: 33%;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  @media (min-width: 960px) {
+    .second-row {
+      display: grid;
+      grid-template-columns: 2fr 3fr 2fr;
+      width: 100%;
+      gap: 20px;
+      height: 425px;
+    }
+    .github-container {
+      height: 100%;
+    }
+    .github-img-small {
+      display: none;
+    }
+    .github-img-large {
+      display: block;
+    }
+    .github-p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 47px;
+    }
+    .freelance-container {
+      height: 100%;
+    }
+    .freelance-container-img {
+      width: 350px;
+      height: 350px;
+    }
+    .freelance-container-p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 59px;
+      padding-right: 40%;
+    }
+    .skills-container {
+      height: 100%;
+    }
+  }
+  .figma {
+    object-fit: contain;
+    height: 73px;
+    margin-top: auto;
+    margin-bottom: 5px;
+  }
+  .js {
+    height: 64.73px;
+    margin-top: 15px;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  .vue {
+    object-fit: contain;
+    height: 49px;
+    margin-top: auto;
+  }
+  .typescript {
+    object-fit: contain;
+    height: 65px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .react {
+    object-fit: contain;
+    height: 63px;
+  }
+  .nextjs {
+    object-fit: contain;
+    height: 58px;
+    margin-top: auto;
+    margin-bottom: 5px;
+  }
+  .tailwind {
+    object-fit: contain;
+    height: 39px;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  .third-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    width: 320px;
+    margin-top: 20px;
+  }
+  .spotify-container {
+    height: 245.6px;
+    width: 100%;
+    background-color: var(--shapes-6);
+    border-radius: 0px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .spotify-container:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+  }
+  .spotify-container-img {
+    object-fit: contain;
+    width: 245.6px;
+  }
+  .contact-container {
+    height: 261px;
+    width: 100%;
+    background-color: var(--shapes-7);
+    border-radius: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .contact-container-secondary {
+    display: flex;
+    padding: 0 25px;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  .contact-container-img {
+    object-fit: contain;
+    width: 162px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+    z-index: 1;
+    animation: zipzip 5s ease-in-out infinite;
+  }
+  .contact-container-img-container {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 0;
+  }
+  .contact-container-img-container-shadow {
+    position: absolute;
+    bottom: 0px;
+    height: 10px;
+    width: 100%;
+    z-index: 999999;
+    background-color: var(--shapes-7);
+  }
+  .contact-container-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    background-color: var(--shapes-7-highlight);
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+  .contact-container-links:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
   }
 
+  @media (min-width: 960px) {
+    .third-row {
+      display: grid;
+      grid-template-columns: 2fr 5fr;
+      width: 100%;
+      gap: 20px;
+      height: 363px;
+    }
+    .spotify-container {
+      height: 100%;
+    }
+    .contact-container {
+      height: 100%;
+    }
+    .contact-container-img {
+      height: 100%;
+      width: auto;
+    }
+    .contact-container-img-container {
+      height: 100%;
+    }
+    .contact-container-secondary {
+      width: 100%;
+      align-items: center;
+      height: 100%;
+    }
+    .contact-container-links {
+      width: 170px;
+      height: 170px;
+      z-index: 99999;
+    }
+  }
   .text-gradient {
     font-weight: 900;
     background-image: var(--astro-gradient);
@@ -58,10 +508,14 @@ import Card from '../components/Card.astro'
     background-size: 100% 200%;
     background-position-y: 100%;
     border-radius: 0.4rem;
-    animation: pulse 4s ease-in-out infinite;
+    animation: pulse 3s ease-in-out infinite;
   }
-  :global(body) {
-    @apply dark:bg-gray-900 h-screen;
+  img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
   }
   @keyframes pulse {
     0%,
@@ -69,23 +523,32 @@ import Card from '../components/Card.astro'
       background-position-y: 0%;
     }
     50% {
+      background-position-y: 90%;
+    }
+  }
+  @keyframes moveBackground {
+    from {
+      background-position-y: 0%;
+    }
+    to {
       background-position-y: 80%;
     }
   }
-
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    background: #4f39fa;
-    padding: 1rem;
-    border-radius: 0.4rem;
-    color: var(--color-bg);
+  @keyframes zipzip {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.5rem);
+    }
   }
-
-  .instructions code {
-    font-size: 0.875em;
-    border: 0.1em solid var(--color-border);
-    border-radius: 4px;
-    padding: 0.15em 0.25em;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
   }
 </style>
